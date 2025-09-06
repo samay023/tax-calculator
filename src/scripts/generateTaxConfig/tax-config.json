@@ -1,0 +1,252 @@
+[
+  {
+    "financialYear": "2024-2025",
+    "brackets": [
+      {
+        "threshold": 0,
+        "rate": 0
+      },
+      {
+        "threshold": 18201,
+        "rate": 0.16
+      },
+      {
+        "threshold": 45001,
+        "rate": 0.3
+      },
+      {
+        "threshold": 135001,
+        "rate": 0.37
+      },
+      {
+        "threshold": 190001,
+        "rate": 0.45
+      }
+    ]
+  },
+  {
+    "financialYear": "2023-2024",
+    "brackets": [
+      {
+        "threshold": 0,
+        "rate": 0
+      },
+      {
+        "threshold": 18201,
+        "rate": 0.19
+      },
+      {
+        "threshold": 45001,
+        "rate": 0.325
+      },
+      {
+        "threshold": 120001,
+        "rate": 0.37
+      },
+      {
+        "threshold": 180001,
+        "rate": 0.45
+      }
+    ]
+  },
+  {
+    "financialYear": "2022-2023",
+    "brackets": [
+      {
+        "threshold": 0,
+        "rate": 0
+      },
+      {
+        "threshold": 18201,
+        "rate": 0.19
+      },
+      {
+        "threshold": 45001,
+        "rate": 0.325
+      },
+      {
+        "threshold": 120001,
+        "rate": 0.37
+      },
+      {
+        "threshold": 180001,
+        "rate": 0.45
+      }
+    ]
+  },
+  {
+    "financialYear": "2021-2022",
+    "brackets": [
+      {
+        "threshold": 0,
+        "rate": 0
+      },
+      {
+        "threshold": 18201,
+        "rate": 0.19
+      },
+      {
+        "threshold": 45001,
+        "rate": 0.325
+      },
+      {
+        "threshold": 120001,
+        "rate": 0.37
+      },
+      {
+        "threshold": 180001,
+        "rate": 0.45
+      }
+    ]
+  },
+  {
+    "financialYear": "2020-2021",
+    "brackets": [
+      {
+        "threshold": 0,
+        "rate": 0
+      },
+      {
+        "threshold": 18201,
+        "rate": 0.19
+      },
+      {
+        "threshold": 45001,
+        "rate": 0.325
+      },
+      {
+        "threshold": 120001,
+        "rate": 0.37
+      },
+      {
+        "threshold": 180001,
+        "rate": 0.45
+      }
+    ]
+  },
+  {
+    "financialYear": "2019-2020",
+    "brackets": [
+      {
+        "threshold": 0,
+        "rate": 0
+      },
+      {
+        "threshold": 18201,
+        "rate": 0.19
+      },
+      {
+        "threshold": 37001,
+        "rate": 0.325
+      },
+      {
+        "threshold": 90001,
+        "rate": 0.37
+      },
+      {
+        "threshold": 180001,
+        "rate": 0.45
+      }
+    ]
+  },
+  {
+    "financialYear": "2018-2019",
+    "brackets": [
+      {
+        "threshold": 0,
+        "rate": 0
+      },
+      {
+        "threshold": 18201,
+        "rate": 0.19
+      },
+      {
+        "threshold": 37001,
+        "rate": 0.325
+      },
+      {
+        "threshold": 90001,
+        "rate": 0.37
+      },
+      {
+        "threshold": 180001,
+        "rate": 0.45
+      }
+    ]
+  },
+  {
+    "financialYear": "2017-2018",
+    "brackets": [
+      {
+        "threshold": 0,
+        "rate": 0
+      },
+      {
+        "threshold": 18201,
+        "rate": 0.19
+      },
+      {
+        "threshold": 37001,
+        "rate": 0.325
+      },
+      {
+        "threshold": 87001,
+        "rate": 0.37
+      },
+      {
+        "threshold": 180001,
+        "rate": 0.45
+      }
+    ]
+  },
+  {
+    "financialYear": "2016-2017",
+    "brackets": [
+      {
+        "threshold": 0,
+        "rate": 0
+      },
+      {
+        "threshold": 18201,
+        "rate": 0.19
+      },
+      {
+        "threshold": 37001,
+        "rate": 0.325
+      },
+      {
+        "threshold": 87001,
+        "rate": 0.37
+      },
+      {
+        "threshold": 180001,
+        "rate": 0.45
+      }
+    ]
+  },
+  {
+    "financialYear": "2015-2016",
+    "brackets": [
+      {
+        "threshold": 0,
+        "rate": 0
+      },
+      {
+        "threshold": 18201,
+        "rate": 0.19
+      },
+      {
+        "threshold": 37001,
+        "rate": 0.325
+      },
+      {
+        "threshold": 80001,
+        "rate": 0.37
+      },
+      {
+        "threshold": 180001,
+        "rate": 0.45
+      }
+    ]
+  }
+]
