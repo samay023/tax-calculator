@@ -1,5 +1,4 @@
 "use client";
-
 import * as React from "react";
 import {
   ResponsiveContainer,
@@ -196,7 +195,7 @@ export default function TaxResultDashboard({ result }: Props) {
                 ))}
                 <LabelList
                   position="outside"
-                  formatter={(v) => `${CURRENCY.format(Number(v))}`}
+                  formatter={(v: string) => `${CURRENCY.format(Number(v))}`}
                 />
               </Pie>
               <Tooltip formatter={(v, n) => [CURRENCY.format(Number(v)), n]} />
@@ -238,7 +237,7 @@ export default function TaxResultDashboard({ result }: Props) {
                 <LabelList
                   dataKey="ratePct"
                   position="top"
-                  formatter={(v) => `${v}%`}
+                  formatter={(v: string) => `${v}%`}
                 />
               </Bar>
             </BarChart>
