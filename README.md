@@ -1,13 +1,12 @@
 # Australian Tax Calculator (Next.js)
 
-A fast, type-safe calculator for Australian income tax with a streamed AI summary and clean charts.
+A fast, type-safe calculator for Australian income tax with charts.
 
 ## Features
 
 - Select financial year (multiple years supported)
 - Enter salary and choose **includes/excludes super**
 - Computes: **gross tax (brackets only)**, **net income**, **effective tax rate** (Medicare levy optional via separate function)
-- Streaming AI summary (Vercel AI SDK + OpenAI)
 - Recharts dashboard: composition donut, bracket bar chart, radial effective-rate gauge
 - Responsive UI with Tailwind + lightweight components
 
@@ -21,7 +20,7 @@ A fast, type-safe calculator for Australian income tax with a streamed AI summar
 
 ## Install
 
-```bash
+````bash
 bun install
 
 
@@ -36,11 +35,9 @@ OPENAI_API_KEY=sk-xxxxxxxxxxxxxxxx
 bun dev
 
 
-### How It Works
-### Core Service
+### Generate Tax Config to auto-fill tax years and brackets. It scrapes the ATO website and uses GPT-4 to parse the HTML into structured JSON.
+```bash
+bun setup:tax-config
+````
 
-TaxCalculatorService takes a flat array of TaxYearConfig (all years) and user input.
-
-Validates inputs with Zod, converts package → base when includesSuper = true, and calculates bracket tax with a pure computeBracketTax helper.
-
-```
+This creates `src/config/tax-config.json` which is imported by the app.
