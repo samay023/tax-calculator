@@ -3,7 +3,7 @@
     "financialYear": "2024-2025",
     "brackets": [
       {
-        "threshold": 0,
+        "threshold": 2,
         "rate": 0
       },
       {
