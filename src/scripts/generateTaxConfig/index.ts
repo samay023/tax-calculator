@@ -1,13 +1,13 @@
 import dotEnv from "dotenv";
 dotEnv.config();
-import { openai } from "@ai-sdk/openai";
-import { generateObject } from "ai";
-import { TaxSchema } from "./schema";
 
-import scrapeTaxRateHTMLFromAto from "./scraper";
-import { SYSTEM_PROMPT } from "./prompt";
+import { openai } from "@ai-sdk/openai";
 import fs from "fs/promises";
 import path from "path";
+import { AIService } from "../../services/ai";
+import { SYSTEM_PROMPT } from "./prompt";
+import { TaxSchema } from "./schema";
+import scrapeTaxRateHTMLFromAto from "./scraper";
 
 const model = openai("gpt-4o-2024-11-20");
 
@@ -15,22 +15,21 @@ const removeFileIfExists = async (filePath: string) => {
   try {
     await fs.access(filePath);
     await fs.unlink(filePath);
-  } catch (err) {
+  } catch {
     // File does not exist or other error
   }
 };
 
 const main = async () => {
-  const text = await scrapeTaxRateHTMLFromAto();
+  const userPrompt = await scrapeTaxRateHTMLFromAto();
+  const aiService = new AIService(model);
 
-  const { object: result } = await generateObject({
-    model,
-    prompt: text.slice(0, 200_000), // limit to first 300k chars
-    schema: TaxSchema,
-    output: "array",
-    temperature: 0,
-    system: SYSTEM_PROMPT,
-  });
+  const { object: result } = await aiService.getJsonResponse(
+    TaxSchema,
+    "array",
+    SYSTEM_PROMPT,
+    userPrompt
+  );
 
   const outPath = path.join(__dirname, "tax-config.json");
   await removeFileIfExists(outPath);
