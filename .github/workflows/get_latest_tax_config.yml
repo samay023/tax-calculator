@@ -1,4 +1,4 @@
-name: Update Tax Config
+name: Update Tax Config using the latest data from ATO
 
 on:
   schedule:
@@ -8,8 +8,7 @@ on:
 
 jobs:
   update-tax-config:
-    runs-on: ubuntu-latest
-
+    runs-on: self-hosted
     steps:
       - name: Checkout
         uses: actions/checkout@v4
