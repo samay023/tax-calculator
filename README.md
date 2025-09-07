@@ -41,3 +41,12 @@ bun setup:tax-config
 ````
 
 This creates `src/config/tax-config.json` which is imported by the app.
+
+## GH action
+
+There is a GitHub action that runs every 6 months to update the tax config automatically. It commits changes to `src/config/tax-config.json` if there are any updates and raises a PR to the `main` branch.
+See `.github/workflows/get_latest_tax_config.yml`.
+
+## License
+
+MIT License
