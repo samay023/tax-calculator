@@ -8,7 +8,7 @@ on:
 
 jobs:
   update-tax-config:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
 
     steps:
       - name: Checkout
@@ -16,8 +16,13 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Setup Bun
-        uses: oven-sh/setup-bun@v1
+      # - name: Setup Bun
+      #   uses: oven-sh/setup-bun@v1
+      - name: Add Bun to PATH
+        run: echo "$HOME/.bun/bin" >> $GITHUB_PATH
+
+      - name: Check Bun
+        run: bun --version || echo "Bun not found on PATH"
 
       - name: Install dependencies
         run: bun install
