@@ -12,12 +12,12 @@ export default async function scrapeTaxRateFromAto() {
       Connection: "keep-alive",
     },
   });
-  if (!res.ok) {
-    console.error(
-      `Failed to fetch ATO page with status ${res.status}: ${await res.text()}`
-    );
-    throw new Error(`Failed to fetch ATO page: ${res.statusText}`);
-  }
+  // if (!res.ok) {
+  //   console.error(
+  //     `Failed to fetch ATO page with status ${res.status}: ${await res.text()}`
+  //   );
+  //   throw new Error(`Failed to fetch ATO page: ${res.statusText}`);
+  // }
 
   return res.text();
 }
