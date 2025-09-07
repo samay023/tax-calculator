@@ -7,12 +7,10 @@ export const BracketSchema = z
   })
   .strict();
 
-export const TaxYearSchema = z
-  .object({
-    financialYear: z.string(), // e.g. "2025-2026"
-    brackets: z.array(BracketSchema).min(1),
-  })
-  .strict();
+export const TaxYearSchema = z.object({
+  financialYear: z.string(), // e.g. "2025-2026"
+  brackets: z.array(BracketSchema).min(1),
+});
 
 export const TaxSchema = z.array(TaxYearSchema);
 
